@@ -7,23 +7,22 @@ public class A_module {
         // 1. 111, 1111, 11111 중에서 최솟값, 최댓값, 중간값을 구하는 로직을 작성하시오.
         System.out.println("최솟값: " + min(111, 1111, 11111));
         System.out.println("최댓값: " + max(111, 1111, 11111));
-        median(111, 1111, 11111);
+        System.out.println("중간값: " + median(111, 1111, 11111));
 
         System.out.println("=============================");
 
         // 2. 222, 2222, 22222 중에서 최솟값, 최댓값, 중간값을 구하는 로직을 작성하시오.
         System.out.println("최솟값: " + min(222, 2222, 22222));
         System.out.println("최댓값: " + max(222, 2222, 22222));
-        median(222, 2222, 22222);
+        System.out.println("중간값: " + median(222, 2222, 22222));
 
         System.out.println("=============================");
 
         // 3. 333, 3333, 33333 중에서 최솟값, 최댓값, 중간값을 구하는 로직을 작성하시오.
         System.out.println("최솟값: " + min(333, 3333, 33333));
         System.out.println("최댓값: " + max(333, 3333, 33333));
-        median(333, 3333, 33333);
+        System.out.println("중간값: " + median(333, 3333, 33333));
     }
-
 
     // NOTE EA00 모듈 : 작업을 수행하는 독립적인 단위
     // 모듈회를 하는 이유:
@@ -40,32 +39,39 @@ public class A_module {
         // 최솟값 구하기
         // 최솟값 출력하기
         int min = a;
-        if (b < min) min = b;
-        if (c < min) min = c;
+        if (b < min) {
+            min = b;
+        }
+        if (c < min) {
+            min = c;
+        }
         return min;
     }
 
     public static int max(int a, int b, int c) {
         int max = a;
-        if (b > max) max = b;
-        if (c > max) max = c;
+        if (b > max) {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+        }
         return max;
     }
 
-    public static void median(int a, int b, int c){
+    public static int median(int a, int b, int c) {
         int max = max(a, b, c);
         int min = min(a, b, c);
 
-        if(a != max && a != min){
-            System.out.println("중간값: " + a);
+        if (a != max && a != min) {
+            return a;
         }
-
-        if(b != max && b != min){
-            System.out.println("중간값: " + b);
+        if (b != max && b != min) {
+            return b;
         }
-
-        if(c != max && c != min){
-            System.out.println("중간값: " + c);
-        }
+        return c;
     }
 }
+
+// ctrl + alt + l : 자동 줄 맞춤
+// if 문을 사용하면 꼭 return아 있어야 한다. 조건문 내에만 return을 사용한다면 missing return statement 발생
