@@ -11,7 +11,7 @@ public class B_dimensionArray {
     }
 
     private static void dynamicArray() {
-        // 가변 배열
+        // NOTE FB02 : 가변 배열
         // 주소배열의 크기만 지정하고 값을 저장하는 배열의 크기는 미정으로 내버려 두는 것
 
         int[][] dArr = new int[2][];
@@ -41,9 +41,14 @@ public class B_dimensionArray {
         for (int[] nums : arr) {
             System.out.println(Arrays.toString(nums));
         }
-
     }
 
+    // NOTE FB01 : 2차원 배열
+    // 2차원 배열 = 배열을 요소로 가지는 배열
+    // 2차원 배열의 인덱스로 접근하면 1차월 배열이 존재
+    // int[][] arr
+    // arr[0] : int[]
+    // arr[0][1] ??
     private static void pracDarray() {
         int[] arr = {1, 2, 3, 4, 5}; // int를 여러 개 보관하는 배열
         // 크기가 4인 int[]을 3개 가지는 2차원 배열
