@@ -36,8 +36,6 @@ public class A_module {
     // 전달인자 : 매개변수에 전달되는 값
     // 반환값 : 함수가 종료될 때 함수의 호출부로 전달할 값, 메서드 선언부의 return type을 명시적으로 저장해야한다.
     public static int min(int a, int b, int c) {
-        // 최솟값 구하기
-        // 최솟값 출력하기
         int min = a;
         if (b < min) {
             min = b;
